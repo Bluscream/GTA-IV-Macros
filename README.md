@@ -1,5 +1,5 @@
 # GTA-IV-Macros
-Macros for Grand Theft Auto IV
+Macros for Grand Theft Auto IV to "autostart" your game and join/host a lobby. Custom scripts on request.
 
 These macro files are created and meant to be used with [Jitbit Macro Recorder](https://www.jitbit.com/macro-recorder/).
 

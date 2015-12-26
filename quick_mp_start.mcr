@@ -3,7 +3,7 @@ RUN CSHARP : using System;{#crlf#}using System.Diagnostics;{#crlf#}{#crlf#}publi
 COMMENT : START -> SOCIAL CLUB LOGIN <- START
 IF WINDOW EXISTS : Beim Social Club anmelden : 0
 ELSE
-OPEN FILE : S:\Grand Theft Auto\GTAIV-LCPDFR_MP\LaunchGTAIV.exe :  : 0
+OPEN FILE : S:\Grand Theft Auto\GTAIV-LCPDFR_MP\LaunchGTAIV.lnk :  : 0
 WAIT FOR : Beim Social Club anmelden : appear : 0 : 0
 ENDIF
 SWITCH TO WINDOW : Beim Social Club anmelden : 0
@@ -11,13 +11,14 @@ Keyboard : AltLeft : KeyDown
 Keyboard : S : KeyPress
 Keyboard : AltLeft : KeyUp
 COMMENT : END -> SOCIAL CLUB LOGIN <- END
+WAIT FOR : Beim Social Club anmelden : disappear : 0 : 0
 WAIT FOR : GTAIV : appear : 0 : 0
-WAIT FOR USER : 88 : 3 : 1 : 60000
+DELAY : 15000
+WAIT FOR USER : 13 : 0 : 0 : 5000
 Keyboard : Enter : KeyPress
-DELAY : 25000
-COMMENT : START -> CREATE LOBBY <- START
+DELAY : 35000
 Keyboard : Up : KeyPress
-DELAY : 300
+DELAY : 750
 Keyboard : Enter : KeyPress
 DELAY : 150
 Keyboard : Down : KeyPress
@@ -58,121 +59,93 @@ Keyboard : Enter : KeyPress
 COMMENT : END -> CREATE LOBBY <- END
 DELAY : 7500
 COMMENT : START -> LOBBY SETTINGS <- START
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+Keyboard : Down : KeyPress
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Right : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Right : KeyUp
-DELAY : 350
-Keyboard : Down : KeyDown
-DELAY : 350
-Keyboard : Down : KeyUp
-DELAY : 350
+DELAY : 250
+Keyboard : Down : KeyPress
+DELAY : 250
 Keyboard : Left : KeyDown
-DELAY : 350
+DELAY : 250
 Keyboard : Left : KeyUp
-DELAY : 350
+DELAY : 100
 Keyboard : Enter : KeyPress
 COMMENT : END -> LOBBY SETTINGS <- END
-DELAY : 5000
+WAIT FOR USER : 13 : 0 : 0 : 15000
 COMMENT : START -> LCPDFR <- START
 Keyboard : AltLeft : KeyDown
 Keyboard : P : KeyPress
 Keyboard : AltLeft : KeyUp
+DELAY : 100
+Keyboard : P : KeyPress
 DELAY : 200
 Keyboard : KeyCode220 : KeyPress
 DELAY : 150
@@ -227,19 +200,15 @@ COMMENT : END -> LCPDFR <- END
 DELAY : 150
 COMMENT : START -> TRAINER SETUP <- START
 Keyboard : F3 : KeyPress
-COMMENT : DELAY : 5000
-COMMENT : Keyboard : NumPad2 : KeyPress
-COMMENT : DELAY : 5000
-COMMENT : Keyboard : NumPad2 : KeyPress
-COMMENT : DELAY : 5000
-COMMENT : Keyboard : NumPad2 : KeyPress
-COMMENT : DELAY : 5000
-COMMENT : Keyboard : NumPad2 : KeyPress
-COMMENT : DELAY : 5000
-COMMENT : Keyboard : NumPad2 : KeyPress
-COMMENT : DELAY : 5000
-COMMENT : Keyboard : NumPad2 : KeyPress
-COMMENT : DELAY : 5000
+DELAY : 500
+Keyboard : NumPad2 : KeyPress
+DELAY : 250
+Keyboard : NumPad2 : KeyPress
+DELAY : 250
+Keyboard : NumPad2 : KeyPress
+DELAY : 250
+Keyboard : NumPad2 : KeyPress
+DELAY : 250
 COMMENT : Keyboard : NumPad5 : KeyPress
 COMMENT : DELAY : 5000
 COMMENT : Keyboard : NumPad8 : KeyPress

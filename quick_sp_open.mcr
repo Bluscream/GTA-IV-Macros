@@ -3,7 +3,7 @@ RUN CSHARP : using System;{#crlf#}using System.Diagnostics;{#crlf#}{#crlf#}publi
 COMMENT : START -> SOCIAL CLUB LOGIN <- START
 IF WINDOW EXISTS : Beim Social Club anmelden : 0
 ELSE
-OPEN FILE : S:\Grand Theft Auto\GTAIV-LCPDFR_SP\LaunchGTAIV.exe :  : 0
+OPEN FILE : S:\Grand Theft Auto\GTAIV-LCPDFR_SP\LaunchGTAIV.lnk :  : 0
 WAIT FOR : Beim Social Club anmelden : appear : 0 : 0
 ENDIF
 SWITCH TO WINDOW : Beim Social Club anmelden : 0
